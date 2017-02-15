@@ -1,0 +1,31 @@
+select * from country;
+select * from country;
+select name from country;
+select name,capital from country;
+select name from country order by name desc;
+select name from country limit 5;
+select name from country limit 100;
+select name from country order by name;
+select name from country where name like '%ia%';
+select region, name from country order by region, name;
+select name, population from country order by population desc limit 20;
+select name, region from country;
+select name from country where name like 'Y%';
+select name, continent from country where continent='Europe'
+select name, continent from country where continent='Europe' or continent='Asia';
+select region, name, population from country where continent='Europe' order by CAST(population as int) desc;
+select name, lifeexpectancy from country where CAST(lifeexpectancy as int)>80
+select name, population from country where CAST(population as int)>5000000 and CAST(population as int)<10000000;
+select name, population from country where CAST(population as int)>5000000 and CAST(population as int)<10000000 and continent='Europe" order by CAST(population as int) desc;
+select name, population from country where CAST(population as int)>5000000 and CAST(population as int)<10000000 and continent='Europe' order by CAST(population as int) desc;
+select name, population from country order by CAST(population as int) desc limit 1;
+select name, lifeexpectancy from country where lifeexpectancy!='NULL' order by lifeexpectancy limit 1
+select sum(CAST(population as int)) from country;
+select name from country where governmentform='Republic';
+select name from country where CAST(indepyear as int)>1975;
+select name, indepyear from country where indepyear!='NULL' order by CAST(indepyear as int) asc limit 10;
+select CURRENT_TIMESTAMP;
+select strftime('%Y', 'now');
+select strftime('%Y', 'now')-min(CAST(indepyear as int)) from country;
+select strftime('%Y', 'now')-CAST(indepyear as int) from country where name='Finland';
+select count(name) from country where name=localname;

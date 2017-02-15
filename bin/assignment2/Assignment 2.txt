@@ -1,0 +1,41 @@
+sqlite> create table powerunit(id int, name varchar(50), location varchar(50), owner varchar(50));
+sqlite> insert into powerunit values(1, 'Wartisila', 'vaasa', 'VAMK');
+sqlite> insert into powerunit values(2, 'forter pp', 'helsinki', 'fortum');
+sqlite> insert into powerunit values(3, 'volvo pento', 'turku', 'turku energia');
+sqlite> select * from powerunit;
+      id = 1
+    name = Wartisila
+location = vaasa
+   owner = VAMK
+
+      id = 2
+    name = forter pp
+location = helsinki
+   owner = fortum
+
+      id = 3
+    name = volvo pento
+location = turku
+   owner = turku energia
+
+
+sqlite> create table powerproduction(id int, hour varchar(50), production varcha
+r(50), powerunit_id varchar(50));
+sqlite> insert into powerproduction values(1, '4', '466', '4');
+sqlite> insert into powerproduction values(2, '5', '568', '3');
+sqlite> insert into powerproduction values(3, '3', '598', '2');
+sqlite> select * from powerproduction;
+          id = 1
+        hour = 4
+  production = 466
+powerunit_id = 4
+
+          id = 2
+        hour = 5
+  production = 568
+powerunit_id = 3
+
+          id = 3
+        hour = 3
+  production = 598
+powerunit_id = 2
