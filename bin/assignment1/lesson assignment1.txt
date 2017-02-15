@@ -1,5 +1,6 @@
 select * from country;
 select * from country;
+select * from country;
 select name from country;
 select name,capital from country;
 select name from country order by name desc;
